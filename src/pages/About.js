@@ -26,6 +26,7 @@ export default class About extends Component {
 
               Interests:
               <li>I like working out!</li>
+              
               <li>I enjoy reading books and listening to music</li>
 
               Fun fact: 

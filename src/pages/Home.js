@@ -1,4 +1,9 @@
+import { compareDesc } from 'date-fns';
 import React, { Component } from 'react';
+import Todos from "../component/todos.js";
+import AddTodo from "../component/AddTodo.js";
+import "./Home.css";
+
   
 class Home extends Component {
   // A default state of this component with an empty list of todos.
@@ -6,6 +11,8 @@ class Home extends Component {
     super();
     this.state = {
       // create your empty list here call it todos.
+      todos:[]
+      
     };
   }
   // the addTodo function simply creates a new array that includes the user submitted todo item and then
@@ -28,7 +35,11 @@ class Home extends Component {
     return (
       <div className="Home">
         <h1>Todo's </h1>
-        <p> Replace this</p>
+        
+         <Todos todos ={this.state.todos}/>
+
+         <AddTodo addTodo = {this.addTodo }/> 
+
       </div>
     );
   }
